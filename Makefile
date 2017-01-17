@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 21sh
+NAME = 42sh
 
 FLAGS = -g -Wall -Wextra -Werror
 
@@ -23,7 +23,8 @@ SRC = main.c error.c static.c  get.c set.c affich.c ft_free.c treat.c xcv.c\
 							treat_red2.c suppr_quote.c heredoc.c free_main.c\
 								tool.c is_operande.c ft_signal2.c redir.c\
 									completion.c display_complete.c\
-										reverse-i-search.c display_reverse.c
+										reverse-i-search.c display_reverse.c\
+											echo.c
 
 OBJ = $(SRC:.c=.o)
 

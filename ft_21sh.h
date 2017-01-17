@@ -116,6 +116,7 @@ typedef struct		s_bin
 ** Minishell
 */
 
+int					ft_echo(t_shell *shell);
 int					specialchar(t_shell *shell, char **command);
 int					heredoc(t_redir *redir, int i);
 int					quoteless(char **quotefull, int i, int j, int k);
