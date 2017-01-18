@@ -200,6 +200,8 @@ int					index_pwd(char **env, char *cmp);
 int					ft_coller_tool(t_com **vag, t_com **tmp, t_com **list);
 int					get_stdin(int fd);
 
+int					tilde(t_shell *sh, char **com, int i, int j);
+
 int					free_main(t_env env);
 int					refresh_histo(t_env *env, t_histo *copy);
 

@@ -50,7 +50,7 @@ int		is_a_builtin(t_shell *shell)
 		super_exit();
 	else if (ft_strcmp(shell->split[0], "env") == 0)
 		return (ft_env(shell));
-	//else if (ft_strcmp(shell->split[0], "echo") == 0)
-	//	return (ft_echo(shell));
+	else if (ft_strcmp(shell->split[0], "echo") == 0)
+		return (ft_echo(shell));
 	return (0);
 }

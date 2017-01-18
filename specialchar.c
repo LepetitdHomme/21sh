@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_21sh.h"
+
 static char	*set_replace_var(char *src, char *tmp, char **dst, int *count)
 {
 	char	*ret;
@@ -86,29 +87,29 @@ int		replace_special_char(t_shell *shell, char **command, int i)
 	return (1);
 }
 
-int		specialchar(t_shell *sh, char **command)
+int		specialchar(t_shell *sh, char **com)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	j = 0;
-	if (((sh == NULL || *command == NULL) && error(0)) || sh->environ == NULL)
+	j = -1;
+	if (((sh == NULL || *com == NULL) && error(0)) || sh->environ == NULL)
 		return (1);
-	while (*command && (*command)[i] != '\0')
+	while (*com && (*com)[i] != '\0')
 	{
-		if ((*command)[i] == 34 || (*command)[i] == 39)
+		if ((*com)[i] == 34 || (*com)[i] == 39)
 		{
-			j = end_of_quote((*command), i);
+			j = end_of_quote((*com), i);
 			while (++i < j)
 			{
-				if ((*command)[i] == '$' && (*command)[j] == 34 &&
-				replace_special_char(sh, command, i) == 1)
+				if (tilde(sh, com, i, j) == 0 && (*com)[i] == '$' &&
+				(*com)[j] == 34 && replace_special_char(sh, com, i) == 1)
 					break ;
 			}
 		}
-		else if ((*command)[i] == '$')
-			replace_special_char(sh, command, i);
+		else if (tilde(sh, com, i, -1) == 0 && (*com)[i] == '$')
+			replace_special_char(sh, com, i);
 		i++;
 	}
 	return (1);
