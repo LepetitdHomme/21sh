@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   shift.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/30 09:32:21 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/27 15:37:28 by csellier         ###   ########.fr       */

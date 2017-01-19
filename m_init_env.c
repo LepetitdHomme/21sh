@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   m_init_env.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:13:49 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/29 16:57:31 by csellier         ###   ########.fr       */

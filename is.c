@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   is.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 15:29:18 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/01 20:05:50 by csellier         ###   ########.fr       */

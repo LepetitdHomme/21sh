@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   list2str.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/06 20:00:10 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/28 11:03:34 by csellier         ###   ########.fr       */

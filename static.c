@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   static.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 16:03:18 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/28 18:46:57 by csellier         ###   ########.fr       */

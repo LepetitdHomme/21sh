@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_21sh.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 16:53:32 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/09 17:53:35 by csellier         ###   ########.fr       */
@@ -149,10 +149,17 @@ int					doesnt(t_shell *shell, char *name, char *value);
 int					ft_setenv(t_shell *shell, char *name, char *value, int w);
 int					ft_export(t_shell *shell);
 
-int					ft_look4flag(t_shell *shell);
-int					ft_cd_noflag(t_shell *shell);
-int					ft_pwd(t_shell *shell, int pwd, int old);
-int					ft_cd(t_shell *shell, int arg);
+int					cd(t_shell *sh);
+int					as_path(t_shell *sh, char *curpath);
+int					treat_pwd(t_shell *sh);
+char				*get_old(t_shell *sh);
+int					join_old_and_path(t_shell *sh, char *path, int old);
+int					set_old(t_shell *sh);
+int					set_pwd(t_shell *sh, int p_flag, char *curpath);
+int					as_old(t_shell *sh, char **curpath);
+int					set_curpath(char **curpath, char *src, int i);
+int					index_directory(char **split);
+int					physical_flag(t_shell *sh);
 
 int					check_param(t_shell *shell, int i);
 int					display_env(char **split);
@@ -199,6 +206,7 @@ t_com				*newcom(void);
 int					index_pwd(char **env, char *cmp);
 int					ft_coller_tool(t_com **vag, t_com **tmp, t_com **list);
 int					get_stdin(int fd);
+
 
 int					tilde(t_shell *sh, char **com, int i, int j);
 

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   tool.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/27 14:00:09 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/27 14:35:07 by csellier         ###   ########.fr       */
@@ -40,7 +40,7 @@ int		index_pwd(char **env, char *cmp)
 	while (env[i])
 	{
 		if (ft_strncmp(env[i], cmp, ft_strlen(cmp)) == 0)
-			return(i);
+			return (i);
 		i++;
 	}
 	return (-1);

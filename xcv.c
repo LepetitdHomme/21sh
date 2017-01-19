@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   xcv.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 14:31:57 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/05 10:20:02 by csellier         ###   ########.fr       */

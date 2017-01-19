@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   copy_lst.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 18:43:56 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/09 17:36:25 by csellier         ###   ########.fr       */

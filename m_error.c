@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   m_error.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:13:42 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/05 19:28:06 by csellier         ###   ########.fr       */
@@ -18,6 +18,13 @@ int		error123(int i)
 		ft_putendl_fd("error: syntax mistake near unexpected operande", 2);
 	else if (i == 21)
 		ft_putendl_fd("warning: pipeheredoc not handled", 2);
+	else if (i == 22)
+		ft_putendl_fd("warning: environment variable HOME seems undefined", 2);
+	else if (i == 23)
+		ft_putendl_fd("error: ambiguous flag detected", 2);
+	else if (i == 24)
+		ft_putendl_fd("warning: current directory not found, PWD set physically"
+		, 2);
 	return (1);
 }
 

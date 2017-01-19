@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   reverse-i-search.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
 /*   Updated: 2017/01/06 16:37:03 by csellier         ###   ########.fr       */

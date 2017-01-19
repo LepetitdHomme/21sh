@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   m_isabuiltin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:13:57 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/05 18:20:50 by csellier         ###   ########.fr       */
@@ -40,8 +40,8 @@ int		is_a_builtin(t_shell *shell)
 {
 	if (shell == NULL)
 		return (-1);
-	if (ft_strcmp(shell->split[0], "cd") == 0)
-		return (ft_cd(shell, 0));
+	if (ft_strcmp(shell->split[0], "cd") == 0 && cd(shell) == 0)
+		return (1);
 	else if (ft_strcmp(shell->split[0], "setenv") == 0)
 		return (ft_export(shell));
 	else if (ft_strcmp(shell->split[0], "unsetenv") == 0)

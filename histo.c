@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   histo.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csllier@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 18:00:44 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/28 16:12:02 by csellier         ###   ########.fr       */

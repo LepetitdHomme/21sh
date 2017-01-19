@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   arbre.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/23 17:10:20 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/05 17:41:55 by csellier         ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_unset_env.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/22 13:36:43 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/24 11:28:11 by csellier         ###   ########.fr       */

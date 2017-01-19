@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   quote_priority.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/07 16:01:51 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/01 21:48:08 by csellier         ###   ########.fr       */

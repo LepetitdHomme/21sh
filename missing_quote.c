@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   missing_quote.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 15:48:53 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/05 16:35:56 by csellier         ###   ########.fr       */

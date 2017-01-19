@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   m_builtins.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:13:17 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/09 17:51:52 by csellier         ###   ########.fr       */

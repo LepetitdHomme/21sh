@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   treat.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:31:00 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/09 17:28:17 by csellier         ###   ########.fr       */

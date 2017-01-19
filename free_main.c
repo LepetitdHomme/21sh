@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   free_main.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/27 11:51:09 by csellier          #+#    #+#             */
 /*   Updated: 2016/11/29 17:19:20 by csellier         ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   suppr_quote.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csellier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 13:32:28 by csellier          #+#    #+#             */
 /*   Updated: 2016/12/01 21:11:59 by csellier         ###   ########.fr       */
