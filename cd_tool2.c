@@ -24,6 +24,8 @@ int			as_old(t_shell *sh, char **curpath)
 	if (ft_strlen(sh->environ[old]) < 8)
 		return (-1);
 	*curpath = ft_strsub(sh->environ[old], 7, ft_strlen(sh->environ[old]) - 7);
+	ft_putstr_fd("PWD=", get_env(NULL)->fd);
+	ft_putendl_fd(*curpath, get_env(NULL)->fd);
 	return (1);
 }
 

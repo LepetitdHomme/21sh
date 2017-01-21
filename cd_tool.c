@@ -19,7 +19,7 @@ static int		test(char *str)
 
 	if (str == NULL)
 		return (-1);
-	i = 0;
+	i = 1;
 	ret = -1;
 	while (str[i] != '\0')
 	{
@@ -54,17 +54,15 @@ int				physical_flag(t_shell *sh)
 	ret = -1;
 	while (sh->split && sh->split[++i])
 	{
-		if (ft_strncmp(sh->split[i], "-", 1) == 0 && ret != -1)
+		if (ft_strcmp(sh->split[i], "-") == 0 && ret == -1)
+			return (2);
+		if (ft_strcmp(sh->split[i], "-") == 0 && ret != -1)
 			return (-2);
 		else if (ft_strncmp(sh->split[i], "-", 1) == 0)
-		{
 			if (ft_strlen(sh->split[i]) > 1 && (ret = test(sh->split[i])) == -1)
 				return (-2);
-			else if (ret != 1 && ret != 0)
-				ret = 2;
-		}
 	}
-	return (ret);
+	return (ret == -1 ? 0 : ret);
 }
 
 int				index_directory(char **split)

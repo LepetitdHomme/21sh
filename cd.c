@@ -81,11 +81,14 @@ static int		cd_2(t_shell *sh, char **curpath)
 
 	if (sh == NULL || *curpath == NULL)
 		return (1);
-	if ((p_flag = physical_flag(sh)) == -2)
-		return (m_error(23));
+	if ((p_flag = physical_flag(sh)) == -2 && m_error(23))
+	{
+		free(*curpath);
+		return (0);
+	}
 	if (p_flag == 2)
 		as_old(sh, curpath);
-	if (p_flag == 0 && (*curpath)[0] != '/')
+	if (p_flag == 1 && (*curpath)[0] != '/')
 		new_curpath(sh, curpath);
 	if (chdir(*curpath) != 0)
 	{
