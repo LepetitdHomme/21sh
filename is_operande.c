@@ -19,7 +19,7 @@ int		ope(char c)
 	return (-1);
 }
 
-int		is_operande(char *list, int i)
+/*int		is_operande(char *list, int i)
 {
 	if (list == NULL)
 		return (-1);
@@ -29,6 +29,7 @@ int		is_operande(char *list, int i)
 		return (-1);
 	return (1);
 }
+*/
 
 int		redir_is_first(char *list)
 {

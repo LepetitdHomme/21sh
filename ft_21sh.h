@@ -132,6 +132,10 @@ int					is_redir(char c);
 char				*handle_redir(t_shell *shell, char *command);
 
 t_bin				*ft_pipe(char *list);
+int					which_operand(char c);
+int					get_status(int x);
+int					ret_fils(int status);
+int					exit_status(int c);
 int					get_static_fork(int i);
 int					lecture(t_shell *shell, t_bin *bin);
 
@@ -286,7 +290,7 @@ int					home_end(t_term *buf, t_com *list);
 int					ft_delete(t_env *env, t_term *buf, t_com **list);
 int					shift(t_env *v, t_term *buf, t_com *list);
 int					control(t_env *v, t_term *buf, t_com *l);
-int					is_operande(char *list, int i);
+//int					is_operande(char *list, int i);
 int					redir_is_first(char *list);
 int					arow(t_env *env, t_term *buf, t_com *l);
 

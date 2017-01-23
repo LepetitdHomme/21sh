@@ -25,7 +25,7 @@ SRC = main.c error.c static.c  get.c set.c affich.c ft_free.c treat.c xcv.c\
 									completion.c display_complete.c\
 										reverse-i-search.c display_reverse.c\
 										echo.c tilde.c cd_tool.c cd_tool2.c\
-										treat_pwd.c
+										treat_pwd.c binary_tree_tool.c
 
 OBJ = $(SRC:.c=.o)
 

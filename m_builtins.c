@@ -54,7 +54,7 @@ static int	w(t_shell *shell)
 	return (-1);
 }
 
-static int	ret_fils(int status)
+int			ret_fils(int status)
 {
 	if (WIFSIGNALED(status))
 	{
@@ -94,8 +94,7 @@ int			mowgli(char *path, t_shell *shell)
 	{
 		signal(SIGINT, SIG_IGN);
 		wait(&c);
-		if (!WIFEXITED(c))
-			ret_fils(c);
+		exit_status(c);
 	}
 	signal(SIGINT, SIG_IGN);
 	return (1);

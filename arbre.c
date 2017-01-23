@@ -33,7 +33,7 @@ int		my_fork(t_shell *shell, t_bin *bin)
 		dup2(pipefd[0], STDIN_FILENO);
 		close(pipefd[1]);
 		lecture(shell, bin->right);
-		wait(NULL);
+		wait(&j);
 	}
 	return (1);
 }
@@ -60,7 +60,10 @@ static int	bintype2(int j, t_shell *shell, t_bin *bin)
 	if (i == 0)
 		my_fork(shell, bin);
 	else if (i > 0)
-		wait(NULL);
+	{
+		wait(&i);
+		exit_status(i);
+	}
 	return (1);
 }
 
@@ -72,17 +75,24 @@ int		lecture(t_shell *shell, t_bin *bin)
 		return (1);
 	j = get_static_fork(-1);
 	if (bin->type == 0)
-	{
 		if (check_builtin(shell, bin->sub, 0) == -1)
 			return (error(15));
-	}
-	else if (bin->type == 1)
+	if (bin->type == 1)
 	{
 		lecture(shell, bin->left);
+		get_status(0);
 		j = get_static_fork(0);
 		lecture(shell, bin->right);
 	}
-	else if (bin->type == 2)
+	if (bin->type == 2 || bin->type == 3)
+	{
+		lecture(shell, bin->left);
+		j = get_static_fork(0);
+		if ((bin->type == 2 && get_status(-2) == 0) ||
+		(bin->type == 3 && get_status(-2) != 0))
+		lecture(shell, bin->right);
+	}
+	else if (bin->type == 4)
 		bintype2(j, shell, bin);
 	return (1);
 }

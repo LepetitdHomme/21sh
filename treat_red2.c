@@ -80,7 +80,8 @@ static void		fork_dup(int *fd, t_shell *shell, int i)
 	}
 	else if (c > 0)
 	{
-		wait(NULL);
+		wait(&c);
+		exit_status(c);
 		fd[0] = 0;
 		fd[1] = 1;
 		fd[2] = 2;
