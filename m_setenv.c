@@ -108,7 +108,7 @@ int		ft_export(t_shell *shell)
 	char	*tmp2;
 
 	if (shell == NULL)
-		return (-1);
+		return (1);
 	if (check_param(shell, 2) == 0)
 		return (1);
 	if ((chri = ft_strchri(shell->split[1], '=')) <= 0)
@@ -120,8 +120,8 @@ int		ft_export(t_shell *shell)
 		tmp2 = ft_strsub(shell->split[1],
 			chri + 1, ft_strlen(shell->split[1]) - chri);
 	if (ft_setenv(shell, tmp, tmp2, 1) == -1)
-		return (-1);
+		return (1);
 	free(tmp);
 	free(tmp2);
-	return (1);
+	return (0);
 }

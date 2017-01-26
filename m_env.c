@@ -101,10 +101,10 @@ int		ft_env(t_shell *shell)
 		}
 		else if (ft_strchri(shell->split[i], '=') != -1)
 			ft_export_2(shell, &shell2, i);
-		else if (exe_command_2(shell, &shell2, i))
-			return (1);
+		else if (exe_command_2(shell, &shell2, i) == 1)
+			return (0);
 	}
 	display_env(shell2.environ);
 	free_ft_env(&shell2);
-	return (1);
+	return (0);
 }

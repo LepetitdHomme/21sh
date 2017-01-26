@@ -38,19 +38,25 @@ int		ft_env_1(t_shell *shell)
 
 int		is_a_builtin(t_shell *shell)
 {
+	int	status;
+
 	if (shell == NULL)
 		return (-1);
-	if (ft_strcmp(shell->split[0], "cd") == 0 && cd(shell) == 0)
-		return (1);
+	status = -1;
+	if (ft_strcmp(shell->split[0], "cd") == 0)
+		status = cd(shell);
 	else if (ft_strcmp(shell->split[0], "setenv") == 0)
-		return (ft_export(shell));
+		status = ft_export(shell);
 	else if (ft_strcmp(shell->split[0], "unsetenv") == 0)
-		return (ft_unset_env(shell->split, shell, 1));
+		status = ft_unset_env(shell->split, shell, 1);
 	else if (ft_strcmp(shell->split[0], "exit") == 0)
 		super_exit();
 	else if (ft_strcmp(shell->split[0], "env") == 0)
-		return (ft_env(shell));
+		status = ft_env(shell);
 	else if (ft_strcmp(shell->split[0], "echo") == 0)
-		return (ft_echo(shell));
-	return (0);
+		status = ft_echo(shell);
+	else
+		return (-2);
+	get_status(status);
+	return (status);
 }

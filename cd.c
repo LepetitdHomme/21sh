@@ -84,7 +84,7 @@ static int		cd_2(t_shell *sh, char **curpath)
 	if ((p_flag = physical_flag(sh)) == -2 && m_error(23))
 	{
 		free(*curpath);
-		return (0);
+		return (1);
 	}
 	if (p_flag == 2)
 		as_old(sh, curpath);
@@ -94,7 +94,7 @@ static int		cd_2(t_shell *sh, char **curpath)
 	{
 		ft_access(*curpath);
 		free(*curpath);
-		return (0);
+		return (1);
 	}
 	set_old(sh);
 	set_pwd(sh, p_flag, *curpath);
@@ -115,10 +115,10 @@ int				cd(t_shell *sh)
 	if ((idir = index_directory(sh->split)) == -1 &&
 	((ihom = index_pwd(sh->environ, "HOME=")) == -1 ||
 	6 > ft_strlen(sh->environ[ihom])) && physical_flag(sh) != 2 && m_error(22))
-		return (0);
+		return (1);
 	curpath = NULL;
 	if (physical_flag(sh) == 2 && (d = get_old(sh)) == NULL && m_error(12))
-		return (0);
+		return (1);
 	if (physical_flag(sh) != 2 && idir == -1 && ihom != -1)
 		d = ft_strsub(sh->environ[ihom], 5, ft_strlen(sh->environ[ihom]) - 5);
 	else if (physical_flag(sh) != 2)

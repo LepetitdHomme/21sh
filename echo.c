@@ -39,13 +39,13 @@ int			ft_echo(t_shell *shell)
 	if (shell == NULL)
 		return (error(0));
 	if (shell->split == NULL || (x = count_split(shell->split)) == 0)
-		return (0);
-	if (x < 2 && ft_putendl_fd("", get_env(NULL)->fd))
 		return (1);
+	if (x < 2 && ft_putendl_fd("", get_env(NULL)->fd))
+		return (0);
 	if (ft_strncmp(shell->split[1], "-n", 2) == 0)
 	{
 		if (x < 3)
-			return (1);
+			return (0);
 		i = 1;
 		while (shell->split && shell->split[++i])
 		{
@@ -57,5 +57,5 @@ int			ft_echo(t_shell *shell)
 	}
 	else
 		just_do_it(shell, x);
-	return (1);
+	return (0);
 }

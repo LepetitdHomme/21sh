@@ -108,7 +108,7 @@ int			exe_command(t_shell *s)
 
 	if (s == NULL || s->split == NULL)
 		return (-1);
-	if (is_a_builtin(s) != 0)
+	if (is_a_builtin(s) != -2)
 		return (1);
 	path = NULL;
 	tmp = NULL;

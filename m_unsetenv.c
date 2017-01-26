@@ -80,13 +80,13 @@ int		ft_unset_env(char **split, t_shell *shell, int i)
 	char	**new_env;
 
 	if (split == NULL || shell == NULL)
-		return (-1);
+		return (1);
 	if ((b = ft_count(shell->environ)) <= 0)
 		return (m_error(8));
 	if ((a = which(shell, i)) == -1)
 		return (m_error(8));
 	if ((new_env = (char **)malloc(sizeof(char *) * (b + 1))) == NULL)
-		return (-1);
+		return (1);
 	new_env[b] = NULL;
 	ft_dzero(new_env, b);
 	m_boucle(shell->environ, new_env, a, b);
@@ -95,5 +95,5 @@ int		ft_unset_env(char **split, t_shell *shell, int i)
 	shell->environ = ft_copy_split(new_env);
 	freesplit(new_env);
 	free(new_env);
-	return (1);
+	return (0);
 }
