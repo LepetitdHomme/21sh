@@ -68,7 +68,7 @@ static int	get_next_type(char *list, int *index, char c, int type)
 	return (0);
 }
 
-static int	check_com_for_bintree(char *list)// raajouter la gestion des qutoes
+static int	check_com_for_bintree(char *list)
 {
 	int		i;
 	int		c;

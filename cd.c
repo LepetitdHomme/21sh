@@ -75,6 +75,25 @@ int				join_old_and_path(t_shell *sh, char *path, int old)
 	return (1);
 }
 
+int				is_root(t_shell *s, char *curpath, int p_flag)
+{
+	int	pwd;
+
+	if (s == NULL || s->environ == NULL || curpath == NULL)
+		return (1);
+	if (curpath[0] != '/' || p_flag == 1)
+		return (1);
+	pwd = index_pwd(s->environ, "PWD=");
+	if (pwd == -1)
+		doesnt(s, "PWD=", curpath);
+	else
+	{
+		free(s->environ[pwd]);
+		s->environ[pwd] = ft_strjoin("PWD=", curpath);
+	}
+	return (0);
+}
+
 static int		cd_2(t_shell *sh, char **curpath)
 {
 	int		p_flag;

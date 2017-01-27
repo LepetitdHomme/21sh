@@ -22,7 +22,7 @@ static int	just_do_it(t_shell *shell, int x)
 	while (shell->split && shell->split[i])
 	{
 		ft_putstr_fd(shell->split[i], get_env(NULL)->fd);
-		if (i + 1 >= x - 1)
+		if (i + 1 > x - 1)
 			break ;
 		ft_putchar_fd(' ', get_env(NULL)->fd);
 		i++;

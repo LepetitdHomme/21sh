@@ -154,6 +154,7 @@ int					ft_setenv(t_shell *shell, char *name, char *value, int w);
 int					ft_export(t_shell *shell);
 
 int					cd(t_shell *sh);
+int					is_root(t_shell *s, char *curpath, int p_flag);
 int					as_path(t_shell *sh, char *curpath);
 int					treat_pwd(t_shell *sh);
 char				*get_old(t_shell *sh);

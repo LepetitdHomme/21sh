@@ -52,6 +52,8 @@ int			set_pwd(t_shell *sh, int p_flag, char *curpath)
 
 	if (sh == NULL || sh->environ == NULL || curpath == NULL)
 		return (1);
+	if (is_root(sh, curpath, p_flag) == 0)
+		return (1);
 	tmp = NULL;
 	pwd = index_pwd(sh->environ, "PWD=");
 	if (p_flag == 1)
