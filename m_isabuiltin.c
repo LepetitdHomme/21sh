@@ -55,6 +55,8 @@ int		is_a_builtin(t_shell *shell)
 		status = ft_env(shell);
 	else if (ft_strcmp(shell->split[0], "echo") == 0)
 		status = ft_echo(shell);
+	else if (ft_strcmp(shell->split[0], "history") == 0)
+		status = history(shell);
 	else
 		return (-2);
 	get_status(status);

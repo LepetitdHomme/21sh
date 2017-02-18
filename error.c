@@ -64,15 +64,15 @@ int			error(int index)
 		ft_putendl_fd("error: getenv failed", 2);
 	else if (index == 5)
 		ft_putendl_fd("error: tcgetattr failed", 2);
-	else if (index == 6)
-		ft_putendl_fd("error: tcsetattr failed", 2);
+	//else if (index == 6)
+	//	ft_putstr_fd("error: tcsetattr failed", 2);
 	else if (index == 7)
 		ft_putendl_fd("error: set_buf failed", 2);
 	else
 		error2(index);
 	if (index > 6)
 		super_exit();
-	ft_putendl_fd("exiting process", 2);
+	ft_putendl_fd("(exiting process)", 2);
 	exit(EXIT_SUCCESS);
 	return (-1);
 }

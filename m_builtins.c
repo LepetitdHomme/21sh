@@ -121,7 +121,7 @@ int			exe_command(t_shell *s)
 	{
 		if ((tmp = ft_strjoin("/", s->split[0])) == NULL ||
 		(path = ft_strjoin(s->path[b], tmp)) == NULL)
-			return (error(6));
+			return (-1);
 		free(tmp);
 	}
 	mowgli(path, s);

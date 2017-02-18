@@ -116,6 +116,10 @@ typedef struct		s_bin
 ** Minishell
 */
 
+int					history(t_shell *shell);
+int					test_h(char **split);
+int					printlist(t_com *list);
+
 int					ft_echo(t_shell *shell);
 int					specialchar(t_shell *shell, char **command);
 int					heredoc(t_redir *redir, int i);

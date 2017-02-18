@@ -25,6 +25,9 @@ int		error123(int i)
 	else if (i == 24)
 		ft_putendl_fd("warning: current directory not found, PWD set physically"
 		, 2);
+	else if (i == 25)
+		ft_putendl_fd("usage: history [-c],[-d][offset],[-p][args],[-s][args]",
+		2);
 	return (1);
 }
 

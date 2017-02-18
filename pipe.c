@@ -32,7 +32,7 @@ static int	set_next_type(char *list, int i, int *index, int type)
 		return (1);
 	else if (type == 2 && i + 1 < len)
 	{
-		if (list[i + 1] != '&' && m_error(20))
+		if (list[i + 1] != '&')
 			return (-1);
 		return (2);
 	}
