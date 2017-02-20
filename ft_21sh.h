@@ -117,6 +117,8 @@ typedef struct		s_bin
 */
 
 int					history(t_shell *shell);
+int					history_cflag(void);
+int					history_dflag(char *offset);
 int					test_h(char **split);
 int					printlist(t_com *list);
 

@@ -40,8 +40,6 @@ static int	print_h(t_histo *h)
 	return (0);
 }
 
-
-
 int		history(t_shell *shell)
 {
 	t_histo		*histo;
@@ -52,5 +50,13 @@ int		history(t_shell *shell)
 		return (print_h(histo));
 	if (test_h(shell->split) != 0)
 		return (m_error(25));
+	if (ft_strcmp(shell->split[1], "-c") == 0)
+		return (history_cflag());
+	if (ft_strcmp(shell->split[1], "-d") == 0)
+	{
+		if (count_split(shell->split) < 3)
+			return (m_error(25));
+		return (history_dflag(shell->split[2]));
+	}
 	return (0);
 }

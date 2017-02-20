@@ -28,6 +28,8 @@ int		error123(int i)
 	else if (i == 25)
 		ft_putendl_fd("usage: history [-c],[-d][offset],[-p][args],[-s][args]",
 		2);
+	else if (i == 26)
+		ft_putendl_fd("history: position dans l'historique hors plage", 2);
 	return (1);
 }
 
