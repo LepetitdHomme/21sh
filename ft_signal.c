@@ -42,6 +42,8 @@ void	ft_signal(int echo)
 	cp = get_env(NULL);
 	list = get_list(NULL);
 	get_prompt("MonTerm>");
+	if (cp->begin != NULL)
+		ft_free_l(cp->begin);
 	get_env(NULL)->begin = NULL;
 	get_env(NULL)->missin_q = 0;
 	get_histo_r(0);
