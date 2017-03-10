@@ -50,6 +50,10 @@ int		history(t_shell *shell)
 		return (print_h(histo));
 	if (test_h(shell->split) != 0)
 		return (m_error(25));
+	if (ft_strcmp(shell->split[1], "-p") == 0)
+		return (history_pflag(shell->split, histo));
+	if (ft_strcmp(shell->split[1], "-s") == 0)
+		return (history_sflag(shell->split, histo));
 	if (ft_strcmp(shell->split[1], "-c") == 0)
 		return (history_cflag());
 	if (ft_strcmp(shell->split[1], "-d") == 0)
