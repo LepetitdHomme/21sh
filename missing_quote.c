@@ -6,13 +6,13 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 15:48:53 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/05 16:35:56 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:23:29 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_21sh.h"
 
-int	is_quote(int c)
+int		is_quote(int c)
 {
 	if (c == 39 || c == 34)
 		return (1);
@@ -24,7 +24,7 @@ int	is_quote(int c)
 		return (-1);
 }
 
-int	fermant(int i, int c)
+int		fermant(int i, int c)
 {
 	if ((is_quote(i) == 1 || is_quote(i) == 3) && c == i)
 		return (1);
@@ -38,7 +38,7 @@ int	fermant(int i, int c)
 		return (-1);
 }
 
-int			count_o(t_com *list)
+int		count_o(t_com *list)
 {
 	int ret;
 
@@ -52,7 +52,7 @@ int			count_o(t_com *list)
 	return (ret);
 }
 
-int			ask_for_quote(t_env *v, int quote)
+int		ask_for_quote(t_env *v, int quote)
 {
 	if (v == NULL)
 		return (error(0));
@@ -73,7 +73,7 @@ int			ask_for_quote(t_env *v, int quote)
 	return (0);
 }
 
-int			missing_quote(t_com *list, int ok)
+int		missing_quote(t_com *list, int ok)
 {
 	int		letter;
 	t_com	*cpy;

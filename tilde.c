@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 18:59:36 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/01 21:48:02 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:32:13 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,9 @@ static int	replace_tilde(char *src, char **dst, int i)
 
 int			tilde(t_shell *sh, char **com, int i, int j)
 {
-	int		h;
+	int	h;
 
-	
-	if (sh == NULL || sh->environ == NULL || com ==  NULL || *com == NULL)
+	if (sh == NULL || sh->environ == NULL || com == NULL || *com == NULL)
 		return (0);
 	if ((*com)[i] != '~')
 		return (0);

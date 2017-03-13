@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:50:56 by csellier          #+#    #+#             */
-/*   Updated: 2016/11/27 12:08:33 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:15:47 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int				index_directory(char **split)
 	return (-1);
 }
 
-int		set_curpath(char **curpath, char *src, int i)
+int				set_curpath(char **curpath, char *src, int i)
 {
 	if (src == NULL)
 		return (-1);

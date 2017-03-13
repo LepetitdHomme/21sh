@@ -6,13 +6,13 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/05 16:37:03 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:22:09 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_21sh.h"
 
-int		ft_out(int c)
+int			ft_out(int c)
 {
 	ft_putchar_fd(c, get_fd(-1));
 	return (1);
@@ -37,7 +37,7 @@ static int	set_cursor(t_env *env, t_term *buf)
 	return (1);
 }
 
-int		display(t_env *env, t_term *buf, t_com *list)
+int			display(t_env *env, t_term *buf, t_com *list)
 {
 	t_com	*init;
 	int		c;
@@ -66,7 +66,7 @@ int		display(t_env *env, t_term *buf, t_com *list)
 	return (1);
 }
 
-int		affich_curs(t_com *cour, t_com *list, t_term *buf, int i)
+int			affich_curs(t_com *cour, t_com *list, t_term *buf, int i)
 {
 	t_com	*vag;
 
@@ -94,11 +94,10 @@ int		affich_curs(t_com *cour, t_com *list, t_term *buf, int i)
 	return (1);
 }
 
-int		affich_prompt(t_env *env)
+int			affich_prompt(t_env *env)
 {
 	if (env == NULL)
 		return (error(0));
-	
 	ft_putstr_fd(GREEN, env->fd);
 	ft_putstr_fd(get_prompt(NULL), env->fd);
 	ft_putstr_fd(END, env->fd);

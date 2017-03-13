@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 18:59:36 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/01 21:48:02 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:30:28 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static char	*set_replace_var(char *src, char *tmp, char **dst, int *count)
 	return (ret);
 }
 
-int		replace_var(char *src, char *tmp, char **dst, int i)
+int			replace_var(char *src, char *tmp, char **dst, int i)
 {
 	char	*new;
 	int		count;
@@ -41,13 +41,12 @@ int		replace_var(char *src, char *tmp, char **dst, int i)
 	new = NULL;
 	if (ft_strlen(src) - 1 == ft_strlen(tmp))
 		return (0);
-	(new = set_replace_var(src, tmp, dst, &count)) == NULL ? error(9) : (j = 0);
+	(new = set_replace_var(src, tmp, dst, &count)) == NULL ? error(9) : 0;
 	k = 0;
+	j = 0;
 	while ((*dst)[j] != '\0')
 	{
-		if (j < i)
-			new[k++] = (*dst)[j++];
-		else if (j >= i && j < (i + (int)ft_strlen(tmp) + 1) && j++)
+		if (j >= i && j < (i + (int)ft_strlen(tmp) + 1) && j++)
 			while (src[count] != '\0')
 				new[k++] = src[count++];
 		else
@@ -58,7 +57,7 @@ int		replace_var(char *src, char *tmp, char **dst, int i)
 	return (1);
 }
 
-int		replace_special_char(t_shell *shell, char **command, int i)
+int			replace_special_char(t_shell *shell, char **command, int i)
 {
 	char	*var;
 	int		j;
@@ -87,7 +86,7 @@ int		replace_special_char(t_shell *shell, char **command, int i)
 	return (1);
 }
 
-int		specialchar(t_shell *sh, char **com)
+int			specialchar(t_shell *sh, char **com)
 {
 	int	i;
 	int	j;

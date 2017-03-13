@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/05 16:37:03 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:20:39 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	delete_this(t_histo *h)
 	t_env	*env;
 
 	if (h == NULL || (env = get_env(NULL)) == NULL)
-		return(1);
+		return (1);
 	if (!h->prev)
 	{
 		env->histo = h->next;
@@ -55,7 +55,9 @@ int			history_dflag(char *offset)
 	int		ofset;
 	int		i;
 
-	if (offset == NULL || (v = get_env(NULL)) == NULL || (h = v->histo) == NULL)
+	if (offset == NULL || (v = get_env(NULL)) == NULL)
+		return (1);
+	if ((h = v->histo) == NULL)
 		return (1);
 	ofset = ft_atoi(offset);
 	i = 1;
@@ -64,7 +66,7 @@ int			history_dflag(char *offset)
 		if (i == ofset)
 		{
 			delete_this(h);
-			break;
+			break ;
 		}
 		h = h->next;
 		i++;

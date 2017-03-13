@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/05 16:37:03 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:36:02 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static t_com	*end_it(t_com *ret)
 	return (ret);
 }
 
-static int	put_space(t_com *ret, t_com **prev)
+static int		put_space(t_com *ret, t_com **prev)
 {
 	if (ret == NULL)
 		return (1);
@@ -44,7 +44,7 @@ static int	put_space(t_com *ret, t_com **prev)
 	return (1);
 }
 
-t_com	*str2list(char **split)
+t_com			*str2list(char **split)
 {
 	t_com	*ret;
 	t_com	*prev;
@@ -73,7 +73,7 @@ t_com	*str2list(char **split)
 	return (end_it(ret));
 }
 
-int		history_sflag(char **split, t_histo *h)
+int				history_sflag(char **split, t_histo *h)
 {
 	t_com	*ret;
 

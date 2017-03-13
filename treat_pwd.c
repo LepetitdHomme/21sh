@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/05 16:37:03 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:30:47 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,5 @@ int				treat_pwd(t_shell *sh)
 	free(sh->environ[p]);
 	sh->environ[p] = ft_strjoin("PWD=", s);
 	free(s);
-	return(0);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 15:29:26 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/01 16:28:54 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 18:06:54 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ int			error(int index)
 		ft_putendl_fd("error: getenv failed", 2);
 	else if (index == 5)
 		ft_putendl_fd("error: tcgetattr failed", 2);
-	//else if (index == 6)
-	//	ft_putstr_fd("error: tcsetattr failed", 2);
+	else if (index == 6)
+		DEBUG;
 	else if (index == 7)
 		ft_putendl_fd("error: set_buf failed", 2);
 	else

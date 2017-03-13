@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/05 16:37:03 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:37:21 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	print_h(t_histo *h)
 	return (0);
 }
 
-int		history(t_shell *shell)
+int			history(t_shell *shell)
 {
 	t_histo		*histo;
 

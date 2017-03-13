@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:31:00 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/09 17:28:17 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:17:41 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static struct dirent	*find_stream(DIR *dir, char *word, t_com **l, t_com **n)
 	{
 		if (ft_strcmp(s->d_name, "..") != 0 && ft_strcmp(s->d_name, ".") != 0 &&
 		ft_strncmp(s->d_name, word, ft_strlen(word)) == 0)
-		break;
+			break ;
 	}
 	if (ft_strlen(word) == ft_strlen(s->d_name))
 	{

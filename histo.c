@@ -6,13 +6,13 @@
 /*   By: csellier <csllier@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/16 18:00:44 by csellier          #+#    #+#             */
-/*   Updated: 2016/11/28 16:12:02 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:23:06 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_21sh.h"
 
-int		save_line(t_env *env, t_com *l)
+int			save_line(t_env *env, t_com *l)
 {
 	t_histo	*new;
 	t_histo	*vag;
@@ -41,7 +41,7 @@ int		save_line(t_env *env, t_com *l)
 	return (1);
 }
 
-t_histo	*which_list(t_env *env)
+t_histo		*which_list(t_env *env)
 {
 	t_histo		*vag;
 

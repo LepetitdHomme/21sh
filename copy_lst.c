@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 18:43:56 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/09 17:36:25 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 16:18:56 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,30 +35,30 @@ int		concat_lst(t_env *v, t_com *end)
 	return (1);
 }
 
-t_com	*copy_lst(t_com *list)
+t_com	*copy_lst(t_com *l)
 {
 	t_com	*vag;
 	t_com	*r;
 
-	if (list == NULL || (r = (t_com *)malloc(sizeof(t_com))) == NULL)
-		error(9);
+	if ((l == NULL || (r = (t_com *)malloc(sizeof(t_com))) == NULL) && error(9))
+		return (NULL);
 	vag = r;
-	r->c = list->c;
-	r->u = list->u;
-	r->h = list->h;
-	r->prev = list->prev;
+	r->c = l->c;
+	r->u = l->u;
+	r->h = l->h;
+	r->prev = l->prev;
 	r->next = NULL;
-	list = list->next;
-	while (list)
+	l = l->next;
+	while (l)
 	{
 		if ((r->next = (t_com *)malloc(sizeof(t_com))) == NULL && error(9))
 			return (NULL);
-		r->next->c = list->c;
-		r->next->u = list->u;
-		r->next->h = list->h;
+		r->next->c = l->c;
+		r->next->u = l->u;
+		r->next->h = l->h;
 		r->next->prev = r;
 		r->next->next = NULL;
-		list = list->next;
+		l = l->next;
 		r = r->next;
 	}
 	return (vag);

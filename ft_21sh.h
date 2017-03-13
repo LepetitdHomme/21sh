@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 16:53:32 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/09 17:53:35 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:12:26 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,7 +220,6 @@ int					index_pwd(char **env, char *cmp);
 int					ft_coller_tool(t_com **vag, t_com **tmp, t_com **list);
 int					get_stdin(int fd);
 
-
 int					tilde(t_shell *sh, char **com, int i, int j);
 
 int					free_main(t_env env);
@@ -299,7 +298,6 @@ int					home_end(t_term *buf, t_com *list);
 int					ft_delete(t_env *env, t_term *buf, t_com **list);
 int					shift(t_env *v, t_term *buf, t_com *list);
 int					control(t_env *v, t_term *buf, t_com *l);
-//int					is_operande(char *list, int i);
 int					redir_is_first(char *list);
 int					arow(t_env *env, t_term *buf, t_com *l);
 

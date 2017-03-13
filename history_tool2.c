@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/05 16:37:03 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 18:07:24 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	print_h_p2(t_histo *h, int arg, int arg2, t_com *l)
 		h = h->prev;
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 static int	print_h_p(t_histo *h, int arg, int arg2)
@@ -65,13 +65,14 @@ int			history_pflag(char **split, t_histo *h)
 	int		arg2;
 	int		len;
 
-
-	if (split == NULL || count_split(split) < 4 || h == NULL)
+	if ((split == NULL || count_split(split) < 4 || h == NULL) && m_error(25))
 		return (1);
-	if ((arg = ft_atoi(split[2])) == 0 || (arg2 = ft_atoi(split[3])) == 0)
+	if ((arg = ft_atoi(split[2])) == 0 && m_error(25))
+		return (1);
+	if ((arg2 = ft_atoi(split[3])) == 0 && m_error(25))
 		return (1);
 	len = count_histo(h);
-	if (arg > len || arg2 > len)
+	if ((arg > len || arg2 > len) && m_error(25))
 		return (1);
 	return (print_h_p(h, arg, arg2));
 }

@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/19 13:35:17 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/09 16:53:40 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:23:42 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		is_redir(char c)
 	return (-1);
 }
 
-int	save_redir(t_shell *shell, int j, int k, char *r)
+int		save_redir(t_shell *shell, int j, int k, char *r)
 {
 	char	*redir;
 	t_redir	*new_redir;

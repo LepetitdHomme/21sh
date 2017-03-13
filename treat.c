@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:31:00 by csellier          #+#    #+#             */
-/*   Updated: 2016/12/09 17:28:17 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:31:05 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int			mini_clear(t_com *com)
 
 int			non_printable(t_env *v, t_term *b, t_com **l, int ret)
 {
-	t_com 	*cp;
+	t_com	*cp;
 
 	if (v == NULL || b == NULL)
 		return (error(0));

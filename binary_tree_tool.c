@@ -6,16 +6,16 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:13:26 by csellier          #+#    #+#             */
-/*   Updated: 2016/11/23 13:59:48 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 16:28:30 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ft_21sh.h"
 
 int		exit_status(int c)
 {
 	int	status;
+
 	if (!WIFEXITED(c) && ret_fils(c))
 		return (1);
 	status = (WEXITSTATUS(c) == 0) ? 0 : 1;

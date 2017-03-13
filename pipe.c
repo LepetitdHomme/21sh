@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:13:26 by csellier          #+#    #+#             */
-/*   Updated: 2016/11/23 13:59:48 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 18:15:07 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	set_next_type(char *list, int i, int *index, int type)
 	}
 	else if (type == 3 && i + 1 < len && list[i + 1] == '|')
 		return (3);
-	else if (type== 4 && i + 1 < len && list[i + 1] != '|')
+	else if (type == 4 && i + 1 < len && list[i + 1] != '|')
 		return (4);
 	return (-1);
 }

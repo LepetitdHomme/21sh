@@ -6,13 +6,13 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/27 11:51:09 by csellier          #+#    #+#             */
-/*   Updated: 2016/11/29 17:19:20 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/13 17:17:15 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_21sh.h"
 
-int		free_redir(t_shell *v)
+int			free_redir(t_shell *v)
 {
 	t_redir *vag;
 
@@ -51,7 +51,7 @@ static int	free_mini2(t_shell shell)
 	return (1);
 }
 
-int		free_mini(t_shell shell, t_env *v)
+int			free_mini(t_shell shell, t_env *v)
 {
 	if (v == NULL)
 		return (error(0));
@@ -75,7 +75,7 @@ int		free_mini(t_shell shell, t_env *v)
 	return (1);
 }
 
-int		refresh_histo(t_env *env, t_histo *copy)
+int			refresh_histo(t_env *env, t_histo *copy)
 {
 	if (env == NULL || copy == NULL)
 		return (error(0));
@@ -85,7 +85,7 @@ int		refresh_histo(t_env *env, t_histo *copy)
 	return (1);
 }
 
-int		free_main(t_env env)
+int			free_main(t_env env)
 {
 	char	*prompt;
 
