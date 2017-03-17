@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 16:53:32 by csellier          #+#    #+#             */
-/*   Updated: 2017/03/13 17:12:26 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/15 17:38:21 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,9 +122,11 @@ int					history_dflag(char *offset);
 int					history_pflag(char **split, t_histo *h);
 int					history_sflag(char **split, t_histo *h);
 int					test_h(char **split);
+t_com				*bang(char *com, int i);
 int					printlist(t_com *list);
 
 int					ft_echo(t_shell *shell);
+int					specialchar2(t_shell *sh, char **com);
 int					specialchar(t_shell *shell, char **command);
 int					heredoc(t_redir *redir, int i);
 int					quoteless(char **quotefull, int i, int j, int k);

@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 18:59:36 by csellier          #+#    #+#             */
-/*   Updated: 2017/03/13 17:30:28 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/15 18:09:14 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,6 @@ int			specialchar(t_shell *sh, char **com)
 			replace_special_char(sh, com, i);
 		i++;
 	}
+	specialchar2(sh, com);
 	return (1);
 }

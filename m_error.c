@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 09:13:42 by csellier          #+#    #+#             */
-/*   Updated: 2017/03/13 17:37:37 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/15 14:34:26 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		error123(int i)
 		ft_putendl_fd("usage: history [-c],[-d][offset],[-p][args],[-s][args]",
 		2);
 	else if (i == 26)
-		ft_putendl_fd("history: position dans l'historique hors plage", 2);
+		ft_putendl_fd("history: no such event", 2);
 	return (1);
 }
 

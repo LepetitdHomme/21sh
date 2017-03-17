@@ -6,7 +6,7 @@
 /*   By: csellier <csellier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/13 12:30:29 by csellier          #+#    #+#             */
-/*   Updated: 2017/03/13 18:07:24 by csellier         ###   ########.fr       */
+/*   Updated: 2017/03/14 12:56:31 by csellier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int			history_pflag(char **split, t_histo *h)
 	if ((arg2 = ft_atoi(split[3])) == 0 && m_error(25))
 		return (1);
 	len = count_histo(h);
-	if ((arg > len || arg2 > len) && m_error(25))
+	if ((arg > len || arg2 > len) && m_error(26))
 		return (1);
 	return (print_h_p(h, arg, arg2));
 }
